@@ -13,6 +13,10 @@ function setQuestion(question) {
   generateQuestion(question.title, question.answers);
 }
 
+// TODO: make this list
+let skills = [
+  "Athletics, Acrobatics, Sleight of Hand, Stealth, Arcana, History, Investigation, Nature, Religion, Animal Handling, Insight, Medicine, Perception, Survival, Deception, Intimidation, Performance, Persuation"
+];
 function start_quiz() {
 
 }
