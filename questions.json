@@ -33,6 +33,15 @@
                 { "display": "yes", "effects": [ { "STR": 1 } ] },
                 { "display": "no", "effects": [ { "STR": -1 } ] }
             ]
+        },
+        {
+            "title": "vwujqhl lzak kwflwfuw sfv kme al'k xajkl 3 dwllwjk, ozwjw s ak rwjg",
+            "answers": [
+                { "display": "7", "effects": [{"INT": -2}]
+                { "display": "9", "effects": [{"INT": 4}]
+                { "display": "15", "effects": [{"INT": -2}]
+                { "display": "22", "effects": [{"INT": -2}]
+            ]
         }
     ]
 }
