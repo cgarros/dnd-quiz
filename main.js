@@ -12,3 +12,7 @@ function setQuestion(question) {
   window.current = question;
   generateQuestion(question.title, question.answers);
 }
+
+function start_quiz() {
+
+}
