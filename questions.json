@@ -26,6 +26,13 @@
                 { "display": "0.5-1 minutes", "effects": [ {"CON": 0 }]},
                 { "display": "<0.5 minutes", "effects": [ {"CON": -1 }]}
             ]
+        },
+        {
+            "title": "Have you or a loved one had an erection that lasted for more than 4 hours",
+            "answers": [
+                { "display": "yes", "effects": [ { "STR": 1 } ] },
+                { "display": "no", "effects": [ { "STR": -1 } ] }
+            ]
         }
     ]
 }
