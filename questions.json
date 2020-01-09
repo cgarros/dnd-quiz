@@ -21,12 +21,18 @@
             "title": "How long can you hold your breath underwater?",
             "answers": [
                 { "display": "over 2 minutes", "effects": [ { "CON": }]},
+                { "display": "over 1 minute and 30 seconds", "effects": [ { "CON": }]},
                 { "display": "over 1 minute", "effects": [ { "CON": }]},
                 { "display": "over 30 seconds", "effects": [ { "CON": }]},
                 { "display": "over 10 seconds", "effects": [ { "CON": }]}
             ]
+        },
+        {
+            "title": "Have you or a loved one had an erection that lasted for more than 4 hours",
+            "answers": [
+                { "display": "yes", "effects": [ { "STR": 1 } ] },
+                { "display": "no", "effects": [ { "STR": -1 } ] }
+            ]
         }
-        }
-
     ]
 }
