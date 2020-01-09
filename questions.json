@@ -12,20 +12,36 @@
             ]
         },
         {
-            "title": "Are you dumb?",
+            "title": "How many hours of intensive exercise/week?",
             "answers": [
-                { "display": "No", "effects": [ { "INT": 3 }, { "CHA": 1 }, { "STEALTH": 4 } ] },
+                { "display": "", "effects": [ { "INT": 3 }, { "CHA": 1 }, { "STEALTH": 4 } ] },
                 { "display": "Yes", "effects": [ { "INT": -3 } ] }
             ]
         },
         {
             "title": "How long can you hold your breath underwater?",
             "answers": [
-                { "display": ">2 minutes", "effects": [ { "CON": 4 }]},
-                { "display": "1.5-2 minutes", "effects": [ {"CON": 3 }]},
-                { "display": "1-1.5 minutes", "effects": [ {"CON": 2 }]},
-                { "display": "0.5-1 minutes", "effects": [ {"CON": 0 }]},
-                { "display": "<0.5 minutes", "effects": [ {"CON": -1 }]}
+                { "display": "over 2 minutes", "effects": [ { "CON": }]},
+                { "display": "over 1 minute and 30 seconds", "effects": [ { "CON": }]},
+                { "display": "over 1 minute", "effects": [ { "CON": }]},
+                { "display": "over 30 seconds", "effects": [ { "CON": }]},
+                { "display": "over 10 seconds", "effects": [ { "CON": }]}
+            ]
+        },
+        {
+            "title": "Have you or a loved one had an erection that lasted for more than 4 hours",
+            "answers": [
+                { "display": "yes", "effects": [ { "STR": 1 } ] },
+                { "display": "no", "effects": [ { "STR": -1 } ] }
+            ]
+        },
+        {
+            "title": "vwujqhl lzak kwflwfuw sfv kme al'k xajkl 3 dwllwjk, ozwjw s ak rwjg",
+            "answers": [
+                { "display": "7", "effects": [{"INT": -2}] },
+                { "display": "9", "effects": [{"INT": 4}] },
+                { "display": "15", "effects": [{"INT": -2}] },
+                { "display": "22", "effects": [{"INT": -2}] }
             ]
         }
     ]
