@@ -11,9 +11,9 @@
             ]
         },
         {
-            "title": "Are you dumb?",
+            "title": "How many hours of intensive exercise/week?",
             "answers": [
-                { "display": "No", "effects": [ { "INT": 3 }, { "CHA": 1 }, { "STEALTH": 4 } ] },
+                { "display": "", "effects": [ { "INT": 3 }, { "CHA": 1 }, { "STEALTH": 4 } ] },
                 { "display": "Yes", "effects": [ { "INT": -3 } ] }
             ]
         },
