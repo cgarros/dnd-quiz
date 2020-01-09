@@ -1,23 +1,30 @@
 {
     "questions": [
         {
-            "id": 1,
-            "depends": [],
-            "title": "Are you smart?",
+            "title": "What is your current GPA?",
             "answers": [
-                { "display": "Yes", "effects": [ { "INT": 3 }, { "CHA": 1 }, { "STEALTH": 4 } ] },
-                { "display": "No", "effects": [ { "INT": -3 } ] }
+                { "display": "4.0", "effects": [ { "INT": 4 }, { "Investigation": 4 } ] },
+                { "display": "3.7-3.9", "effects": [ { "INT": 3 }, {"Investigation": 3 } ] },
+                { "display": "3.4-3.6", "effects": [ { "INT": 2}, {"Investigation": 2 } ] },
+                { "display": "3.0-3.3", "effects": [ {"INT": 1}, {"Investigation": 1 } ] },
+                { "display": "<3.0", "effects": }
             ]
         },
         {
-            "id": 2,
-            "depends": [],
             "title": "Are you dumb?",
             "answers": [
                 { "display": "No", "effects": [ { "INT": 3 }, { "CHA": 1 }, { "STEALTH": 4 } ] },
                 { "display": "Yes", "effects": [ { "INT": -3 } ] }
             ]
         },
+        {
+            "title": "How long can you hold your breath underwater?",
+            "answers": [
+                { "display": ">2 minutes", "effects": [ { "CON": }]}
+            ]
+        }
+        },
 
     ]
 }
+Athletics, Acrobatics, Sleight of Hand, Stealth, Arcana, History, Investigation, Nature, Religion, Animal Handling, Insight, Medicine, Perception, Survival, Deception, Intimidation, Performance, Persuation 
