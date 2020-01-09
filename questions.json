@@ -20,10 +20,12 @@
         {
             "title": "How long can you hold your breath underwater?",
             "answers": [
-                { "display": ">2 minutes", "effects": [ { "CON": }]}
+                { "display": ">2 minutes", "effects": [ { "CON": 4 }]},
+                { "display": "1.5-2 minutes", "effects": [ {"CON": 3 }]},
+                { "display": "1-1.5 minutes", "effects": [ {"CON": 2 }]},
+                { "display": "0.5-1 minutes", "effects": [ {"CON": 0 }]},
+                { "display": "<0.5 minutes", "effects": [ {"CON": -1 }]}
             ]
         }
-        },
-
     ]
 }
