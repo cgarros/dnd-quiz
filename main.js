@@ -17,6 +17,28 @@ function setQuestion(question) {
 let skills = [
   "Athletics, Acrobatics, Sleight of Hand, Stealth, Arcana, History, Investigation, Nature, Religion, Animal Handling, Insight, Medicine, Perception, Survival, Deception, Intimidation, Performance, Persuation"
 ];
-function start_quiz() {
 
+function getAScore(score) {
+  return localStorage.quiz.scores[score] || 0;
+}
+
+function nextQuestion() {
+  localStorage.quiz.question_index ++;
+}
+
+function start_quiz() {
+  localStorage.quiz = {
+    question_index: -1,
+    scores: {}
+  };
+  nextQuestion();
+}
+window.onload = function () {
+  fetch('questions.json')
+    .then((response) => {
+      return response.json();
+    })
+    .then((myJson) => {
+      window.questions = myJson
+    });
 }

@@ -7,7 +7,8 @@
                 { "display": "3.7-3.9", "effects": [ { "INT": 3 }, {"Investigation": 3 } ] },
                 { "display": "3.4-3.6", "effects": [ { "INT": 2}, {"Investigation": 2 } ] },
                 { "display": "3.0-3.3", "effects": [ {"INT": 1}, {"Investigation": 1 } ] },
-                { "display": "<3.0", "effects": }
+                { "display": "<3.0", "effects": [{"INT":0}]},
+                { "display": "Didn't do university", "effects": [{"INT":-1}]}
             ]
         },
         {
