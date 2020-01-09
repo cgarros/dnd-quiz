@@ -1,0 +1,23 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "depends": [],
+            "title": "Are you smart?",
+            "answers": [
+                { "display": "Yes", "effects": [ { "INT": 3 }, { "CHA": 1 }, { "STEALTH": 4 } ] },
+                { "display": "No", "effects": [ { "INT": -3 } ] }
+            ]
+        },
+        {
+            "id": 2,
+            "depends": [],
+            "title": "Are you dumb?",
+            "answers": [
+                { "display": "No", "effects": [ { "INT": 3 }, { "CHA": 1 }, { "STEALTH": 4 } ] },
+                { "display": "Yes", "effects": [ { "INT": -3 } ] }
+            ]
+        },
+
+    ]
+}
