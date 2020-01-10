@@ -18,7 +18,7 @@
                 { "display": "8-12 hours", "effects": [ { "STR": 3 }, {"Athletics": 3} ] },
                 { "display": "4-8 hours", "effects": [ { "STR": 2}, {"Athletics": 2} ] },
                 { "display": "2-4 hours", "effects": [ { "STR": 1}, {"Athletics": 1} ] },
-                { "display": "<2 hours", "effects": [ { "STR": 0},  ] }
+                { "display": "<2 hours", "effects": [ { "STR": 0} ] }
             ]
         },
         {
@@ -36,9 +36,10 @@
         {
             "title": "What's the highest level route you've climbed at the UofA high wall?",
             "answers": [
-                { "display": "5.11", "effects": [ {"STR": 4}, { "Athletics": 4} ] },
+                { "display": "5.11 or higher", "effects": [ {"STR": 4}, { "Athletics": 4} ] },
                 { "display": "5.11-", "effects": [ {"STR": 3}, {"Athletics": 3} ] },
-                { "display": "5.10+", "effects": [ {"STR": 2}, {"Athletics": 2} ] }
+                { "display": "5.10+", "effects": [ {"STR": 2}, {"Athletics": 2} ] },
+                { "display": "5.9-5.10", "effects": [ {"STR": 1},{"Athletics": 1} ] }
             ]
         },
         {
