@@ -14,22 +14,45 @@
         {
             "title": "How many hours of intensive exercise/week?",
             "answers": [
-                { "display": "", "effects": [ { "INT": 3 }, { "CHA": 1 }, { "STEALTH": 4 } ] },
-                { "display": "Yes", "effects": [ { "INT": -3 } ] }
+                { "display": ">12 hours", "effects": [ { "STR": 4 }, { "Athletics": 4 } ] },
+                { "display": "8-12 hours", "effects": [ { "STR": 3 }, {"Athletics": 3} ] },
+                { "display": "4-8 hours", "effects": [ { "STR": 2}, {"Athletics": 2} ] },
+                { "display": "2-4 hours", "effects": [ { "STR": 1}, {"Athletics": 1} ] },
+                { "display": "<2 hours", "effects": [ { "STR": 0},  ] }
+            ]
+        },
+        {
+            "title": "What's the highest level route you've climbed at the UofA boulder lounge?",
+            "answers": [
+                { "display": "6", "effects": [ {"STR": 4}, { "Athletics": 4} ] },
+                { "display": "5", "effects": [ {"STR": 3}, { "Athletics": 3} ] },
+                { "display": "4", "effects": [ {"STR": 2}, {"Athletics": 2} ] },
+                { "display": "3", "effects": [ {"STR": 1}, {"Athletics": 1} ] },
+                { "display": "2", "effects": [ {"STR": 0}, {"Athletics": 0} ] },
+                { "display": "1", "effects": [ {"STR": -1}, {"Athletics": -1} ] },
+                { "display": "I've never gone climbing", "effects": [ {"STR": 0}, {"Athletics": 0} ] }
+            ]
+        },
+        {
+            "title": "What's the highest level route you've climbed at the UofA high wall?",
+            "answers": [
+                { "display": "5.11", "effects": [ {"STR": 4}, { "Athletics": 4} ] },
+                { "display": "5.11-", "effects": [ {"STR": 3}, {"Athletics": 3} ] },
+                { "display": "5.10+", "effects": [ {"STR": 2}, {"Athletics": 2} ] }
             ]
         },
         {
             "title": "How long can you hold your breath underwater?",
             "answers": [
-                { "display": "over 2 minutes", "effects": [ { "CON": }]},
-                { "display": "over 1 minute and 30 seconds", "effects": [ { "CON": }]},
-                { "display": "over 1 minute", "effects": [ { "CON": }]},
-                { "display": "over 30 seconds", "effects": [ { "CON": }]},
-                { "display": "over 10 seconds", "effects": [ { "CON": }]}
+                { "display": "over 2 minutes", "effects": [ { "CON": 4 }]},
+                { "display": "over 1 minute and 30 seconds", "effects": [ { "CON": 3 }]},
+                { "display": "over 1 minute", "effects": [ { "CON": 2 }]},
+                { "display": "over 30 seconds", "effects": [ { "CON": 1 }]},
+                { "display": "over 10 seconds", "effects": [ { "CON": 0 }]}
             ]
         },
         {
-            "title": "Have you or a loved one had an erection that lasted for more than 4 hours",
+            "title": "Have you or a loved one had an erection that lasted for more than 4 hours?",
             "answers": [
                 { "display": "yes", "effects": [ { "STR": 1 } ] },
                 { "display": "no", "effects": [ { "STR": -1 } ] }
@@ -40,9 +63,9 @@
             "answers": [
                 { "display": "7", "effects": [{"INT": -2}] },
                 { "display": "9", "effects": [{"INT": 4}] },
-                { "display": "15", "effects": [{"INT": -2}] },
-                { "display": "22", "effects": [{"INT": -2}] }
+                { "display": "15", "effects": [{"INT": -2} ] },
+                { "display": "22", "effects": [{"INT": -2} ] }
             ]
-        }
+        },
     ]
 }
