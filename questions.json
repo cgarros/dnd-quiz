@@ -67,5 +67,13 @@
                 { "display": "22", "effects": [{"INT": -2} ] }
             ]
         },
+        {
+            "title": "How many languages can you program in? (1000 lines of code or more)",
+            "answers": [
+                { "display": "More then 15", "effects": [{"INT": 2}] },
+                { "display": "More then 3", "effects": [{"INT": 1}] },
+                { "display": "3 or less", "effects": [{"INT": 0}] },
+            ]
+        }
     ]
 }
