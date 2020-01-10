@@ -24,6 +24,7 @@ function getAScore(score) {
 
 function nextQuestion() {
   localStorage.quiz.question_index ++;
+  setQuestion(window.questions.questions[localStorage.quiz.question_index])
 }
 
 function start_quiz() {
@@ -33,6 +34,7 @@ function start_quiz() {
   };
   nextQuestion();
 }
+
 window.onload = function () {
   fetch('questions.json')
     .then((response) => {
