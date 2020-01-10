@@ -1,6 +1,7 @@
 {
     "questions": [
         {
+            "id": 1,
             "title": "What is your current GPA?",
             "answers": [
                 { "display": "4.0", "effects": [ { "INT": 4 }, { "Investigation": 4 } ] },
@@ -12,6 +13,7 @@
             ]
         },
         {
+            "id": 2,
             "title": "How many hours of intensive exercise/week?",
             "answers": [
                 { "display": ">12 hours", "effects": [ { "STR": 4 }, { "Athletics": 4 } ] },
@@ -22,6 +24,7 @@
             ]
         },
         {
+            "id": 3,
             "title": "What's the highest level route you've climbed at the UofA boulder lounge?",
             "answers": [
                 { "display": "6", "effects": [ {"STR": 4}, { "Athletics": 4} ] },
@@ -34,15 +37,19 @@
             ]
         },
         {
-            "title": "What's the highest level route you've climbed at the UofA high wall?",
+            "id": 4,
+            "title": "What's the highest level route you've climbed at a high wall?",
             "answers": [
                 { "display": "5.11 or higher", "effects": [ {"STR": 4}, { "Athletics": 4} ] },
                 { "display": "5.11-", "effects": [ {"STR": 3}, {"Athletics": 3} ] },
                 { "display": "5.10+", "effects": [ {"STR": 2}, {"Athletics": 2} ] },
-                { "display": "5.9-5.10", "effects": [ {"STR": 1},{"Athletics": 1} ] }
+                { "display": "5.9-5.10", "effects": [ {"STR": 1},{"Athletics": 1} ] },
+                { "display": "5.8 or lower", "effects": [ {"STR": 0 }, {"Athletics": 0} ] },
+                { "display": "I've never gone climbing on a high wall", "effects": [ {"STR": 0}, {"Athletics": 0 } ] }
             ]
         },
         {
+            "id": 5,
             "title": "How long can you hold your breath underwater?",
             "answers": [
                 { "display": "over 2 minutes", "effects": [ { "CON": 4 }]},
@@ -53,27 +60,95 @@
             ]
         },
         {
-            "title": "Have you or a loved one had an erection that lasted for more than 4 hours?",
-            "answers": [
-                { "display": "yes", "effects": [ { "STR": 1 } ] },
-                { "display": "no", "effects": [ { "STR": -1 } ] }
-            ]
-        },
-        {
+            "id": 6,
             "title": "vwujqhl lzak kwflwfuw sfv kme al'k xajkl 3 dwllwjk, ozwjw s ak rwjg",
             "answers": [
-                { "display": "7", "effects": [{"INT": -2}] },
-                { "display": "9", "effects": [{"INT": 4}] },
-                { "display": "15", "effects": [{"INT": -2} ] },
-                { "display": "22", "effects": [{"INT": -2} ] }
+                { "display": "7", "effects": [ {"INT": -2}] },
+                { "display": "9", "effects": [ {"INT": 4}] },
+                { "display": "15", "effects": [ {"INT": -2} ] },
+                { "display": "22", "effects": [ {"INT": -2} ] }
             ]
         },
         {
+            "id": 7,
+            "title": "Do you know how to program?",
+            "answers": [
+                {"display": "yes", "effects": [ {"INT": 1 }, { "Arcana": 1 } ] },
+                {"display": "no", "effects": [ { "INT": 0 }, { "Arcana": 0 } ] }
+            ]
+        },
+        {
+            "id": 8,
+            "depends": [
+                {"question": 7, "answers": [ 0 ] }
+            ],
             "title": "How many languages can you program in? (1000 lines of code or more)",
             "answers": [
-                { "display": "More then 15", "effects": [{"INT": 2}] },
-                { "display": "More then 3", "effects": [{"INT": 1}] },
-                { "display": "3 or less", "effects": [{"INT": 0}] },
+                { "display": "More then 15", "effects": [{"INT": 2}, { "Arcana": 2 } ] },
+                { "display": "More then 3", "effects": [{"INT": 1}, { "Arcana": 1 } ] },
+                { "display": "3 or less", "effects": [{"INT": 0}, { "Arcana": 0 } ] },
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Do you currently play an instrument?",
+            "answers": [
+                {"display": "yes", "effects": [ { "CHA": 1}, { "Performance": 1 } ] },
+                {"display": "no", "effects": [ { "CHA": 0}, { "Performance": 0} ] }
+            ]
+        },
+        {
+            "id": 10,
+            "depends": [
+                {"question": 9, "answers": [ 0 ] }
+            ],
+            "title": "How many years have you played your instrument? (if more than one, answer for the one you've played the longest)",
+            "answers": [
+                {"display": "10-15 (or more)", "effects": [ { "CHA": 4 }, { "Performance": 4 } ] },
+                {"display": "6-9", "effects": [ { "CHA": 3 }, { "Performance": 3 } ] },
+                {"display": "3-5", "effects": [ { "CHA": 2 }, { "Performance": 2 } ] },
+                {"display": "2 or less", "effects": [ { "CHA": 1 }, { "Performance": 1 } ] }
+                
+            ]
+        },
+        {
+            "id": 11,
+            "title": "Have you done any martial arts in the last 3 years?",
+            "answers": [
+                {"display": "yes", "effects": [ { "DEX": 1 }, { "Acrobatics": 1 } ] },
+                {"display": "no", "effects": [ { "DEX": 0 }, { "Acrobatics": 0} ] }
+            ]
+        },
+        {
+            "id": 12,
+            "title": "How many years did you actively practise/have been actively practising your martial art?",
+            "answers": [
+                {"display": "15 or more", "effects": [ { "DEX": 4 }, { "Acrobatics": 4 } ] },
+                {"display": "10-14", "effects": [ { "DEX": 3 }, { "Acrobatics": 3 } ] },
+                {"display": "5-9", "effects": [ { "DEX": 2 }, { "Acrobatics": 2 } ] },
+                {"display": "less than 5", "effects": [ { "DEX": 1 }, { "Acrobatics": 1} ] }
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Can you do a cartwheel?",
+            "answers": [
+                {"display": "yes", "effects": [ { "DEX": 1 }, { "Acrobatics": 1 } ] },
+                {"display": "no", "effects": [ { "DEX": 0 }, { "Acrobatics": 0 } ] }
+            ]
+        },
+        {
+            "id": 14,
+            "title": "How many drinks does it take you to get drunk?",
+            ""
+        },
+        {
+            "id": 15,
+            "title": "How good is your vision?",
+            "answers": [
+                {"display": "I don't need glasses/contacts", "effects": [ { "Perception": 0 } ] },
+                {"display": "I need glasses ONLY for reading (nearsighted OR farsighted)", "effects": [ { "Perception": -1 } ] },
+                {"display": "I wear glases/contacts all the time", "effects": [ { "Perception": -2 } ] }
             ]
         }
     ]
