@@ -63,8 +63,8 @@
             "id": 6,
             "title": "vwujqhl lzak kwflwfuw sfv kme al'k xajkl 3 dwllwjk, ozwjw s ak rwjg",
             "answers": [
-                { "display": "7", "effects": [ {"INT": -2}] },
-                { "display": "9", "effects": [ {"INT": 4}] },
+                { "display": "7", "effects": [ {"INT": -2} ] },
+                { "display": "9", "effects": [ {"INT": 4} ] },
                 { "display": "15", "effects": [ {"INT": -2} ] },
                 { "display": "22", "effects": [ {"INT": -2} ] }
             ]
@@ -121,6 +121,9 @@
         },
         {
             "id": 12,
+            "depends": [
+                {"question": 11, "answers": [ 0 ] }
+            ],
             "title": "How many years did you actively practise/have been actively practising your martial art?",
             "answers": [
                 {"display": "15 or more", "effects": [ { "DEX": 4 }, { "Acrobatics": 4 } ] },
@@ -165,11 +168,12 @@
                 {"display": "Engineering", "effects": [ { "INT": 4 } ] },
                 {"display": "Science", "effects": [ { "INT": 4 } ] },
                 {"display": "Arts", "effects": [ { "WIS": 4 } ] },
-                {"display": "Education", "effects": [ { "CHA": 4 } ] },
-                {"display": "Kinesiology", "effects": [ { "STR": 4 } ] },
-                {"display": "ALES", "effects": [ { "WIS": 4 } ] },
-                {"display": "Nursing", "effects": [ { "WIS": 4 } ] },
-                {"display": "Native Studies", "effects": [ { "WIS": 4 } ] },
+                {"display": "Business", "effects": [ { "CHA": 4 }, { "Persuation": 4 }, { "Deception": 3 } ] },
+                {"display": "Education", "effects": [ { "CHA": 4 }, { "Persuation": 4 }, { "Insight": 3 } ] },
+                {"display": "Kinesiology", "effects": [ { "STR": 4 }, { "Athletics": 4 }, { "Acrobatics": 3 } ] },
+                {"display": "ALES", "effects": [ { "WIS": 4 }, { "Nature": 4 }, { "Animal Handling": 3 } ] },
+                {"display": "Nursing", "effects": [ { "WIS": 4 }, { "Medicine": 4 }, { "Insight": 3 } ] },
+                {"display": "Native Studies", "effects": [ { "WIS": 4 }, { "History": 4 }, { "Nature": 3 } ] },
                 {"display": "Other", "effects": [ { "INT": 4 } ] },
                 {"display": "Not currently studying in University", "effects": [ { "INT": 0 } ] }
             ]
@@ -197,7 +201,7 @@
             "depends": [
                 {"question": 16, "answers": [ 1 ] }
             ],
-            "title": "What is your major (Or department your specialization/honours is within)? If doing a double major, pick the major you enjoy the most/feel you are more knowledgable in.",
+            "title": "Within what department is your major (Or department your specialization/honours is within)? If doing a double major, pick the major you enjoy the most/feel you are more knowledgable in.",
             "answers": [
                 {"display": "Biology", "effects": [ { "Nature": 4 }, { "Medicine": 2 } ] },
                 {"display": "Chemistry", "effects": [ { "Arcana": 4 }, { "Medicine": 2 } ] },
@@ -214,7 +218,7 @@
             "depends": [
                 {"question": 16, "answers": [ 1 ] }
             ],
-            "title": "What is your minor? If in a specialization or honours, pick the same choice as the previous question again. If doing a double major, pick the major you did not choose in the previous question.",
+            "title": "Within what department is your minor? If in a specialization or honours, pick the same choice as the previous question again. If doing a double major, pick the major you did not choose in the previous question.",
             "answers": [
                 {"display": "Biology", "effects": [ { "Nature": 1 } ] },
                 {"display": "Chemistry", "effects": [ { "Arcana": 1 } ] },
@@ -232,10 +236,162 @@
             "depends": [
                 {"question": 16, "answers": [ 2 ] }
             ],
-            "title": "What is your major (Or department your specialization/honours is within)? If doing a double major, pick the major you enjoy the most/feel you are more knowledgable in.",
+            "title": "Within what department is your major (Or department your specialization/honours is within)? If doing a double major, pick the major you enjoy the most/feel you are more knowledgable in.",
             "answers": [
                 {"display": "Anthropology", "effects": [ { "History": 4 }, { "Nature": 2 } ] },
-                {"display": ""}
+                {"display": "Art and Design", "effects": [ { "Persuation": 4 }, { "Performance": 2 } ] },
+                {"display": "Drama", "effects": [ { "Performance": 4 }, { "Deception": 3 } ] },
+                {"display": "East Asian Studies", "effects": [ { "History": 4 }, { "Insight": 2 } ] },
+                {"display": "Economics", "effects": [ { "Investigation": 4 }, { "History": 2 } ] },
+                {"display": "English and film", "effects": [ { "Persuation": 4 }, { "Insight": 2 } ] },
+                {"display": "History and Classics", "effects": [ { "History": 4 }, { "Religion": 2 } ] },
+                {"display": "Linguistics", "effects": [ { "Perception": 4 }, { "Insight": 2 } ] },
+                {"display": "Languages and Culture", "effects": [ { "Insight": 4 }, { "Perception": 2 } ] },
+                {"display": "Music", "effects": [ { "Performance": 4 }, { "History": 2 } ] },
+                {"display": "Philosophy", "effects": [ { "Investigation": 4 }, { "Insight": 2 } ] },
+                {"display": "Political Science", "effects": [ { "Deception": 4 }, { "Persuation": 2 } ] },
+                {"display": "Psychology", "effects": [ { "Insight": 4 }, { "Persuation": 2 } ] },
+                {"display": "Sociology", "effects": [ { "Insight": 4 }, { "Persuation": 2 } ] },
+                {"display": "Women and Gender", "effects": [ { "Insight": 4 }, { "History": 2 } ] },
+                {"display": "General/undeclared", "effects": [ { "Investigation": 4 } ] }
+            ]
+        },
+        {
+            "id": 21,
+            "depends": [
+                {"question": 16, "answers": [ 2 ] }
+            ],
+            "title": "Within what department is your minor? If in a specialization or honours, pick the same choice as the previous question again. If doing a double major, pick the major you did not choose in the previous question.",
+            "answers": [
+                {"display": "Anthropology", "effects": [ { "History": 1 } ] },
+                {"display": "Art and Design", "effects": [ { "Persuation": 1 } ] },
+                {"display": "Drama", "effects": [ { "Performance": 1 } ] },
+                {"display": "East Asian Studies", "effects": [ { "History": 1 } ] },
+                {"display": "Economics", "effects": [ { "Investigation": 1 } ] },
+                {"display": "English and/or film", "effects": [ { "Persuation": 1 } ] },
+                {"display": "History and/or Classics", "effects": [ { "History": 1 } ] },
+                {"display": "Linguistics", "effects": [ { "Perception": 1 } ] },
+                {"display": "Languages and Culture", "effects": [ { "Insight": 1 } ] },
+                {"display": "Music", "effects": [ { "Performance": 1 } ] },
+                {"display": "Philosophy", "effects": [ { "Investigation": 1 } ] },
+                {"display": "Political Science", "effects": [ { "Deception": 1 } ] },
+                {"display": "Psychology", "effects": [ { "Insight": 1 } ] },
+                {"display": "Sociology", "effects": [ { "Insight": 1 } ] },
+                {"display": "Women and Gender", "effects": [ { "Insight": 1 } ] },
+                {"display": "General/undeclared", "effects": [ { "Investigation": 1 } ] }
+            ]
+        },
+        {
+            "id": 22,
+            "title": "Have you ever had/do you have any pets in your house?",
+            "answers": [
+                {"display": "yes", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 23,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a dog?",
+            "answers": [
+                {"display": "yes, and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes, but it felt more like I shared a home with it rather than it being my dog", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 24,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a cat?",
+            "answers": [
+                {"display": "yes, and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes, but it felt more like I shared a home with it rather than it being my cat", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 25,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a bird? (If've you've had a parrot and non-parrot, answer for parrot)",
+            "answers": [
+                {"display": "yes (a parrot), and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes (a parrot), but it felt more like I shared a home with it rather than it being my bird", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "yes (non-parrot), and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 3 } ] },
+                {"display": "yes (non-parrot), but it felt more like I shared a home with it rather than it being my bird", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 26,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a reptile or amphibian?",
+            "answers": [
+                {"display": "yes and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes, but it felt more like I shared a home with it rather than it being my pet", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 25,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a fish? (If've you've had saltwater and freshwater, answer for saltwater)",
+            "answers": [
+                {"display": "yes (saltwater), and I cared (or helped care) for it", "effects": [ { "Nature": 4 } ] },
+                {"display": "yes (saltwater), but it felt more like I shared a home with it rather than it being my pet", "effects": [ { "nature": 1 } ] },
+                {"display": "yes (freshwater), and I cared (or helped care) for it", "effects": [ { "Nature": 2 } ] },
+                {"display": "yes (freshwater), but it felt more like I shared a home with it rather than it being my pet", "effects": [ { "Nature": 0 } ] },
+                {"display": "no", "effects": [ { "Nature": 0 } ] }
+            ]
+        },
+        {
+            "id": 26,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a small mammal? (hamster, guinea pig, gerbil, mouse, etc.)",
+            "answers": [
+                {"display": "yes, and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes, but it felt more like I shared a home with it rather than it being my pet", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 27,
+            "title": "Do you keep your own houseplants or maintain a garden? (You water and care for them yourself and those grown for school don't count)",
+            "answers": [
+                {"display": "yes, and I do a great job/love it. I even have grown some higher maintenance plants", "effects": [ { "Nature": 4 } ] },
+                {"display": "yes and I do a reasonable job/enjoy it. I only keep lower maintenance plants", "effects": [ { "Nature": 3 } ] },
+                {"display": "yes, but they ALWAYS die... I'm not very good at it", "effects": [ { "Nature": -1 } ] },
+                {"display": "I've never grown a plant myself", "effects": [ { "Nature": 0 } ] }
+            ]
+        },
+        {
+            "id": 28,
+            "title": "Have you ever worked a retail job and felt you were good at it? (e.g., working in a clothing store, dealing with customers and selling products)",
+            "answers": [
+                {"display": "yes", "effects": [ { "CHA": 1 } ] },
+                {"display": "no", "effects": [ { "CHA": 0} ] }
+            ]
+        },
+        {
+            "id": 29,
+            "title": "How do you feel about public speaking?",
+            "answers": [
+                {"display": "I enjoy and am great at it. I feel very comfortable adressing even large or important crowds", "effects": [ { "CHA": 4 } ] },
+                {"display": "I am good at it and enjoy it somewhat, but I do it only when needed.", "effects": [ { "CHA": 2 } ] },
+                {"display": "I am average at it and don't enjoy or dislike it", "effects": [ { "CHA": 0 } ] },
+                {"display": "Public speaking makes me nervous and I don't like it", "effects": [ { "CHA": -1 } ] },
+                {"display": "I have terrible stage fright and freeze up when addressing groups", "effects": [ { "CHA": -2 } ] }
             ]
         }
     ]
