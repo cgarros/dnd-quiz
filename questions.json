@@ -140,7 +140,13 @@
         {
             "id": 14,
             "title": "How many drinks does it take you to get drunk?",
-            ""
+            "answers": [
+                {"display": "10 or more", "effects": [ { "CON": 3 } ] },
+                {"display": "7-9", "effects": [ { "CON": 2 } ] },
+                {"display": "5-6", "effects": [ { "CON": 1 } ] },
+                {"display": "4", "effects": [ { "CON": 0} ] },
+                {"display": "less than 3", "effects": [ {-1} ] }
+            ]
         },
         {
             "id": 15,
@@ -148,7 +154,88 @@
             "answers": [
                 {"display": "I don't need glasses/contacts", "effects": [ { "Perception": 0 } ] },
                 {"display": "I need glasses ONLY for reading (nearsighted OR farsighted)", "effects": [ { "Perception": -1 } ] },
-                {"display": "I wear glases/contacts all the time", "effects": [ { "Perception": -2 } ] }
+                {"display": "I legally must wear glasses/contacts to drive", "effects": [ { "Perception": -2 } ] },
+                {"display": "I wear glasses/contacts all the time (except sleeping of course)", "effects": [ { "Perception": -3 } ] }
+            ]
+        },
+        {
+            "id": 16,
+            "title": "What faculty are you in?",
+            "answers": [
+                {"display": "Engineering", "effects": [ { "INT": 4 } ] },
+                {"display": "Science", "effects": [ { "INT": 4 } ] },
+                {"display": "Arts", "effects": [ { "WIS": 4 } ] },
+                {"display": "Education", "effects": [ { "CHA": 4 } ] },
+                {"display": "Kinesiology", "effects": [ { "STR": 4 } ] },
+                {"display": "ALES", "effects": [ { "WIS": 4 } ] },
+                {"display": "Nursing", "effects": [ { "WIS": 4 } ] },
+                {"display": "Native Studies", "effects": [ { "WIS": 4 } ] },
+                {"display": "Other", "effects": [ { "INT": 4 } ] },
+                {"display": "Not currently studying in University", "effects": [ { "INT": 0 } ] }
+            ]
+        },
+        {
+            "id": 17,
+             "depends": [
+                {"question": 16, "answers": [ 0 ] }
+            ],
+            "title": "What is your department?",
+            "answers": [
+                {"display": "Mechanical", "effects": [ { "Investigation": 4 } ] },
+                {"display": "Computer", "effects": [ { "Arcana": 4 }, { "Investigation": 3 } ] },
+                {"display": "Civil", "effects": [ { "Nature": 4 }, { "Investigation": 3 } ] },
+                {"display": "Electrical", "effects": [ { "Arcana": 3 }, { "Religion": 4 } ] },
+                {"display": "Mining", "effects": [ { "Survival": 3 }, { "Nature": 4 } ] },
+                {"display": "Petroleum", "effects": [ { "Nature": 4 }, { "Investigation": 3 } ] },
+                {"display": "Materials", "effects": [ { "Nature": 3 }, { "Investigation": 4 } ] },
+                {"display": "Engineering physics", "effects": [ { "Perception": 4 }, { "Investigation": 3 } ] },
+                {"display": "Chemical", "effects": [ { "Arcana": 4 }, { "Medicine": 3 } ] }
+            ]
+        },
+        {
+            "id": 18,
+            "depends": [
+                {"question": 16, "answers": [ 1 ] }
+            ],
+            "title": "What is your major (Or department your specialization/honours is within)? If doing a double major, pick the major you enjoy the most/feel you are more knowledgable in.",
+            "answers": [
+                {"display": "Biology", "effects": [ { "Nature": 4 }, { "Medicine": 2 } ] },
+                {"display": "Chemistry", "effects": [ { "Arcana": 4 }, { "Medicine": 2 } ] },
+                {"display": "Physics", "effects": [ { "Perception": 4 }, { "Nature": 2 } ] },
+                {"display": "Math and Statistics", "effects": [ { "Investigation": 4 }, { "Sleight of Hand": 2 } ] },
+                {"display": "Earth and Atmospheric", "effects": [ { "Survival": 4 }, { "Nature": 2 } ] },
+                {"display": "Computing", "effects": [ { "Arcana": 4 }, { "Investigation": 2 } ] },
+                {"display": "Psychology", "effects": [ { "Insight": 4 }, { "Persuation": 2 } ] },
+                {"display": "General/undeclared", "effects": [ { "Investigation": 4 } ] }
+            ]
+        },
+        {
+            "id": 19,
+            "depends": [
+                {"question": 16, "answers": [ 1 ] }
+            ],
+            "title": "What is your minor? If in a specialization or honours, pick the same choice as the previous question again. If doing a double major, pick the major you did not choose in the previous question.",
+            "answers": [
+                {"display": "Biology", "effects": [ { "Nature": 1 } ] },
+                {"display": "Chemistry", "effects": [ { "Arcana": 1 } ] },
+                {"display": "Physics", "effects": [ { "Perception": 1 } ] },
+                {"display": "Math and Statistics", "effects": [ { "Investigation": 1 } ] },
+                {"display": "Earth and Atmospheric", "effects": [ { "Survival": 1 } ] },
+                {"display": "Computing", "effects": [ { "Arcana": 1 } ] },
+                {"display": "Psychology", "effects": [ { "Insight": 1 } ] },
+                {"display": "Other", "effects": [ { "Investigation": 1 } ] },
+                {"display": "General/undeclared", "effects": [ { "Investigation": 1 } ] }
+            ]
+        },
+        {
+            "id": 20,
+            "depends": [
+                {"question": 16, "answers": [ 2 ] }
+            ],
+            "title": "What is your major (Or department your specialization/honours is within)? If doing a double major, pick the major you enjoy the most/feel you are more knowledgable in.",
+            "answers": [
+                {"display": "Anthropology", "effects": [ { "History": 4 }, { "Nature": 2 } ] },
+                {"display": ""}
             ]
         }
     ]
