@@ -344,7 +344,7 @@
             "depends": [
                 {"question": 22, "answers": [ 0 ] }
             ],
-            "title": "Did you ever have/do you have a fish? (If've you've had saltwater and freshwater, answer for saltwater)",
+            "title": "Did you ever have/do you have a fish/ an aquarium? (If've you've had saltwater and freshwater, answer for saltwater)",
             "answers": [
                 {"display": "yes (saltwater), and I cared (or helped care) for it", "effects": [ { "Nature": 4 } ] },
                 {"display": "yes (saltwater), but it felt more like I shared a home with it rather than it being my pet", "effects": [ { "nature": 1 } ] },
@@ -392,6 +392,35 @@
                 {"display": "I am average at it and don't enjoy or dislike it", "effects": [ { "CHA": 0 } ] },
                 {"display": "Public speaking makes me nervous and I don't like it", "effects": [ { "CHA": -1 } ] },
                 {"display": "I have terrible stage fright and freeze up when addressing groups", "effects": [ { "CHA": -2 } ] }
+            ]
+        },
+        {
+            "id": 30,
+            "title": "Have you ever ridden a horse?",
+            "answers": [
+                {"display": "I regularly ride and can comfortably ride at a gallop", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "I regularly ride but I'm not comfortable riding at a galloping pace", "effects": [ { "Animal handling": 3 } ] },
+                {"display": "I don't regularly ride but have ridden at faster than a walking pace and I know how to steer and control the horse myself", "effects": [ { "Animal handling": 2 } ] },
+                {"display": "I have ridden before but someone else did most of the work (setting up the tack, directing the horse etc. Think group horseback tours)", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "I have sat on a horse before but pony ride style (someone leading the horse) or have never been on a horse before", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 31,
+            "title": "Have you done archery before?",
+            "answers": [
+                {"display": "Yes and I'm good at it (I do archery regularly, use it to hunt, etc.)", "effects": [ { "DEX": 4 } ] },
+                {"display": "Yes I've done it more than once and I'm ok at it", "effects": [ { "DEX": 3 } ] },
+                {"display": "Yes I've tried it before and I'm about as good as you'd expect a beginner to be", "effects": [ { "DEX": 2 } ] },
+                {"display": "Yes but I've only tried it once (for example, as part of summer camp as a child)", "effects": [ { "DEX": 0 } ] },
+                {"display": "No I have never fired a bow", "effects": [ { "DEX": 0 } ] }
+            ]
+        },
+        {
+            "id": 32,
+            "title": "What is your experience with camping?",
+            "answers": [
+                {"display": "I go quite often, have done a variety of different types (backpacking, winter camping, etc.). I know my way around camping equipment and have camped in places where I had to bring everything I needed (no ammenities at the campsite)", "effects": [ { "Survival": 4 } ] }
             ]
         }
     ]
