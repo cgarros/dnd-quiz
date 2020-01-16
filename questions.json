@@ -1,6 +1,7 @@
 {
     "questions": [
         {
+            "id": 1,
             "title": "What is your current GPA?",
             "answers": [
                 { "display": "4.0", "effects": [ { "INT": 4 }, { "Investigation": 4 } ] },
@@ -12,6 +13,7 @@
             ]
         },
         {
+            "id": 2,
             "title": "How many hours of intensive exercise/week?",
             "answers": [
                 { "display": ">12 hours", "effects": [ { "STR": 4 }, { "Athletics": 4 } ] },
@@ -22,6 +24,7 @@
             ]
         },
         {
+            "id": 3,
             "title": "What's the highest level route you've climbed at the UofA boulder lounge?",
             "answers": [
                 { "display": "6", "effects": [ {"STR": 4}, { "Athletics": 4} ] },
@@ -34,14 +37,19 @@
             ]
         },
         {
-            "title": "What's the highest level route you've climbed at the UofA high wall?",
+            "id": 4,
+            "title": "What's the highest level route you've climbed at a high wall?",
             "answers": [
-                { "display": "5.11", "effects": [ {"STR": 4}, { "Athletics": 4} ] },
+                { "display": "5.11 or higher", "effects": [ {"STR": 4}, { "Athletics": 4} ] },
                 { "display": "5.11-", "effects": [ {"STR": 3}, {"Athletics": 3} ] },
-                { "display": "5.10+", "effects": [ {"STR": 2}, {"Athletics": 2} ] }
+                { "display": "5.10+", "effects": [ {"STR": 2}, {"Athletics": 2} ] },
+                { "display": "5.9-5.10", "effects": [ {"STR": 1},{"Athletics": 1} ] },
+                { "display": "5.8 or lower", "effects": [ {"STR": 0 }, {"Athletics": 0} ] },
+                { "display": "I've never gone climbing on a high wall", "effects": [ {"STR": 0}, {"Athletics": 0 } ] }
             ]
         },
         {
+            "id": 5,
             "title": "How long can you hold your breath underwater?",
             "answers": [
                 { "display": "over 2 minutes", "effects": [ { "CON": 4 }]},
@@ -52,27 +60,367 @@
             ]
         },
         {
-            "title": "Have you or a loved one had an erection that lasted for more than 4 hours?",
-            "answers": [
-                { "display": "yes", "effects": [ { "STR": 1 } ] },
-                { "display": "no", "effects": [ { "STR": -1 } ] }
-            ]
-        },
-        {
+            "id": 6,
             "title": "vwujqhl lzak kwflwfuw sfv kme al'k xajkl 3 dwllwjk, ozwjw s ak rwjg",
             "answers": [
-                { "display": "7", "effects": [{"INT": -2}] },
-                { "display": "9", "effects": [{"INT": 4}] },
-                { "display": "15", "effects": [{"INT": -2} ] },
-                { "display": "22", "effects": [{"INT": -2} ] }
+                { "display": "7", "effects": [ {"INT": -2} ] },
+                { "display": "9", "effects": [ {"INT": 4} ] },
+                { "display": "15", "effects": [ {"INT": -2} ] },
+                { "display": "22", "effects": [ {"INT": -2} ] }
             ]
         },
         {
+            "id": 7,
+            "title": "Do you know how to program?",
+            "answers": [
+                {"display": "yes", "effects": [ {"INT": 1 }, { "Arcana": 1 } ] },
+                {"display": "no", "effects": [ { "INT": 0 }, { "Arcana": 0 } ] }
+            ]
+        },
+        {
+            "id": 8,
+            "depends": [
+                {"question": 7, "answers": [ 0 ] }
+            ],
             "title": "How many languages can you program in? (1000 lines of code or more)",
             "answers": [
-                { "display": "More then 15", "effects": [{"INT": 2}] },
-                { "display": "More then 3", "effects": [{"INT": 1}] },
-                { "display": "3 or less", "effects": [{"INT": 0}] }
+                { "display": "More then 15", "effects": [{"INT": 2}, { "Arcana": 2 } ] },
+                { "display": "More then 3", "effects": [{"INT": 1}, { "Arcana": 1 } ] },
+                { "display": "3 or less", "effects": [{"INT": 0}, { "Arcana": 0 } ] },
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Do you currently play an instrument?",
+            "answers": [
+                {"display": "yes", "effects": [ { "CHA": 1}, { "Performance": 1 } ] },
+                {"display": "no", "effects": [ { "CHA": 0}, { "Performance": 0} ] }
+            ]
+        },
+        {
+            "id": 10,
+            "depends": [
+                {"question": 9, "answers": [ 0 ] }
+            ],
+            "title": "How many years have you played your instrument? (if more than one, answer for the one you've played the longest)",
+            "answers": [
+                {"display": "10-15 (or more)", "effects": [ { "CHA": 4 }, { "Performance": 4 } ] },
+                {"display": "6-9", "effects": [ { "CHA": 3 }, { "Performance": 3 } ] },
+                {"display": "3-5", "effects": [ { "CHA": 2 }, { "Performance": 2 } ] },
+                {"display": "2 or less", "effects": [ { "CHA": 1 }, { "Performance": 1 } ] }
+
+            ]
+        },
+        {
+            "id": 11,
+            "title": "Have you done any martial arts in the last 3 years?",
+            "answers": [
+                {"display": "yes", "effects": [ { "DEX": 1 }, { "Acrobatics": 1 } ] },
+                {"display": "no", "effects": [ { "DEX": 0 }, { "Acrobatics": 0} ] }
+            ]
+        },
+        {
+            "id": 12,
+            "depends": [
+                {"question": 11, "answers": [ 0 ] }
+            ],
+            "title": "How many years did you actively practise/have been actively practising your martial art?",
+            "answers": [
+                {"display": "15 or more", "effects": [ { "DEX": 4 }, { "Acrobatics": 4 } ] },
+                {"display": "10-14", "effects": [ { "DEX": 3 }, { "Acrobatics": 3 } ] },
+                {"display": "5-9", "effects": [ { "DEX": 2 }, { "Acrobatics": 2 } ] },
+                {"display": "less than 5", "effects": [ { "DEX": 1 }, { "Acrobatics": 1} ] }
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Can you do a cartwheel?",
+            "answers": [
+                {"display": "yes", "effects": [ { "DEX": 1 }, { "Acrobatics": 1 } ] },
+                {"display": "no", "effects": [ { "DEX": 0 }, { "Acrobatics": 0 } ] }
+            ]
+        },
+        {
+            "id": 14,
+            "title": "How many drinks does it take you to get drunk?",
+            "answers": [
+                {"display": "10 or more", "effects": [ { "CON": 3 } ] },
+                {"display": "7-9", "effects": [ { "CON": 2 } ] },
+                {"display": "5-6", "effects": [ { "CON": 1 } ] },
+                {"display": "4", "effects": [ { "CON": 0} ] },
+                {"display": "less than 3", "effects": [ {-1} ] }
+            ]
+        },
+        {
+            "id": 15,
+            "title": "How good is your vision?",
+            "answers": [
+                {"display": "I don't need glasses/contacts", "effects": [ { "Perception": 0 } ] },
+                {"display": "I need glasses ONLY for reading (nearsighted OR farsighted)", "effects": [ { "Perception": -1 } ] },
+                {"display": "I legally must wear glasses/contacts to drive", "effects": [ { "Perception": -2 } ] },
+                {"display": "I wear glasses/contacts all the time (except sleeping of course)", "effects": [ { "Perception": -3 } ] }
+            ]
+        },
+        {
+            "id": 16,
+            "title": "What faculty are you in?",
+            "answers": [
+                {"display": "Engineering", "effects": [ { "INT": 4 } ] },
+                {"display": "Science", "effects": [ { "INT": 4 } ] },
+                {"display": "Arts", "effects": [ { "WIS": 4 } ] },
+                {"display": "Business", "effects": [ { "CHA": 4 }, { "Persuation": 4 }, { "Deception": 3 } ] },
+                {"display": "Education", "effects": [ { "CHA": 4 }, { "Persuation": 4 }, { "Insight": 3 } ] },
+                {"display": "Kinesiology", "effects": [ { "STR": 4 }, { "Athletics": 4 }, { "Acrobatics": 3 } ] },
+                {"display": "ALES", "effects": [ { "WIS": 4 }, { "Nature": 4 }, { "Animal Handling": 3 } ] },
+                {"display": "Nursing", "effects": [ { "WIS": 4 }, { "Medicine": 4 }, { "Insight": 3 } ] },
+                {"display": "Native Studies", "effects": [ { "WIS": 4 }, { "History": 4 }, { "Nature": 3 } ] },
+                {"display": "Other", "effects": [ { "INT": 4 } ] },
+                {"display": "Not currently studying in University", "effects": [ { "INT": 0 } ] }
+            ]
+        },
+        {
+            "id": 17,
+             "depends": [
+                {"question": 16, "answers": [ 0 ] }
+            ],
+            "title": "What is your department?",
+            "answers": [
+                {"display": "Mechanical", "effects": [ { "Investigation": 4 } ] },
+                {"display": "Computer", "effects": [ { "Arcana": 4 }, { "Investigation": 3 } ] },
+                {"display": "Civil", "effects": [ { "Nature": 4 }, { "Investigation": 3 } ] },
+                {"display": "Electrical", "effects": [ { "Arcana": 3 }, { "Religion": 4 } ] },
+                {"display": "Mining", "effects": [ { "Survival": 3 }, { "Nature": 4 } ] },
+                {"display": "Petroleum", "effects": [ { "Nature": 4 }, { "Investigation": 3 } ] },
+                {"display": "Materials", "effects": [ { "Nature": 3 }, { "Investigation": 4 } ] },
+                {"display": "Engineering physics", "effects": [ { "Perception": 4 }, { "Investigation": 3 } ] },
+                {"display": "Chemical", "effects": [ { "Arcana": 4 }, { "Medicine": 3 } ] }
+            ]
+        },
+        {
+            "id": 18,
+            "depends": [
+                {"question": 16, "answers": [ 1 ] }
+            ],
+            "title": "Within what department is your major (Or department your specialization/honours is within)? If doing a double major, pick the major you enjoy the most/feel you are more knowledgable in.",
+            "answers": [
+                {"display": "Biology", "effects": [ { "Nature": 4 }, { "Medicine": 2 } ] },
+                {"display": "Chemistry", "effects": [ { "Arcana": 4 }, { "Medicine": 2 } ] },
+                {"display": "Physics", "effects": [ { "Perception": 4 }, { "Nature": 2 } ] },
+                {"display": "Math and Statistics", "effects": [ { "Investigation": 4 }, { "Sleight of Hand": 2 } ] },
+                {"display": "Earth and Atmospheric", "effects": [ { "Survival": 4 }, { "Nature": 2 } ] },
+                {"display": "Computing", "effects": [ { "Arcana": 4 }, { "Investigation": 2 } ] },
+                {"display": "Psychology", "effects": [ { "Insight": 4 }, { "Persuation": 2 } ] },
+                {"display": "General/undeclared", "effects": [ { "Investigation": 4 } ] }
+            ]
+        },
+        {
+            "id": 19,
+            "depends": [
+                {"question": 16, "answers": [ 1 ] }
+            ],
+            "title": "Within what department is your minor? If in a specialization or honours, pick the same choice as the previous question again. If doing a double major, pick the major you did not choose in the previous question.",
+            "answers": [
+                {"display": "Biology", "effects": [ { "Nature": 1 } ] },
+                {"display": "Chemistry", "effects": [ { "Arcana": 1 } ] },
+                {"display": "Physics", "effects": [ { "Perception": 1 } ] },
+                {"display": "Math and Statistics", "effects": [ { "Investigation": 1 } ] },
+                {"display": "Earth and Atmospheric", "effects": [ { "Survival": 1 } ] },
+                {"display": "Computing", "effects": [ { "Arcana": 1 } ] },
+                {"display": "Psychology", "effects": [ { "Insight": 1 } ] },
+                {"display": "Other", "effects": [ { "Investigation": 1 } ] },
+                {"display": "General/undeclared", "effects": [ { "Investigation": 1 } ] }
+            ]
+        },
+        {
+            "id": 20,
+            "depends": [
+                {"question": 16, "answers": [ 2 ] }
+            ],
+            "title": "Within what department is your major (Or department your specialization/honours is within)? If doing a double major, pick the major you enjoy the most/feel you are more knowledgable in.",
+            "answers": [
+                {"display": "Anthropology", "effects": [ { "History": 4 }, { "Nature": 2 } ] },
+                {"display": "Art and Design", "effects": [ { "Persuation": 4 }, { "Performance": 2 } ] },
+                {"display": "Drama", "effects": [ { "Performance": 4 }, { "Deception": 3 } ] },
+                {"display": "East Asian Studies", "effects": [ { "History": 4 }, { "Insight": 2 } ] },
+                {"display": "Economics", "effects": [ { "Investigation": 4 }, { "History": 2 } ] },
+                {"display": "English and film", "effects": [ { "Persuation": 4 }, { "Insight": 2 } ] },
+                {"display": "History and Classics", "effects": [ { "History": 4 }, { "Religion": 2 } ] },
+                {"display": "Linguistics", "effects": [ { "Perception": 4 }, { "Insight": 2 } ] },
+                {"display": "Languages and Culture", "effects": [ { "Insight": 4 }, { "Perception": 2 } ] },
+                {"display": "Music", "effects": [ { "Performance": 4 }, { "History": 2 } ] },
+                {"display": "Philosophy", "effects": [ { "Investigation": 4 }, { "Insight": 2 } ] },
+                {"display": "Political Science", "effects": [ { "Deception": 4 }, { "Persuation": 2 } ] },
+                {"display": "Psychology", "effects": [ { "Insight": 4 }, { "Persuation": 2 } ] },
+                {"display": "Sociology", "effects": [ { "Insight": 4 }, { "Persuation": 2 } ] },
+                {"display": "Women and Gender", "effects": [ { "Insight": 4 }, { "History": 2 } ] },
+                {"display": "General/undeclared", "effects": [ { "Investigation": 4 } ] }
+            ]
+        },
+        {
+            "id": 21,
+            "depends": [
+                {"question": 16, "answers": [ 2 ] }
+            ],
+            "title": "Within what department is your minor? If in a specialization or honours, pick the same choice as the previous question again. If doing a double major, pick the major you did not choose in the previous question.",
+            "answers": [
+                {"display": "Anthropology", "effects": [ { "History": 1 } ] },
+                {"display": "Art and Design", "effects": [ { "Persuation": 1 } ] },
+                {"display": "Drama", "effects": [ { "Performance": 1 } ] },
+                {"display": "East Asian Studies", "effects": [ { "History": 1 } ] },
+                {"display": "Economics", "effects": [ { "Investigation": 1 } ] },
+                {"display": "English and/or film", "effects": [ { "Persuation": 1 } ] },
+                {"display": "History and/or Classics", "effects": [ { "History": 1 } ] },
+                {"display": "Linguistics", "effects": [ { "Perception": 1 } ] },
+                {"display": "Languages and Culture", "effects": [ { "Insight": 1 } ] },
+                {"display": "Music", "effects": [ { "Performance": 1 } ] },
+                {"display": "Philosophy", "effects": [ { "Investigation": 1 } ] },
+                {"display": "Political Science", "effects": [ { "Deception": 1 } ] },
+                {"display": "Psychology", "effects": [ { "Insight": 1 } ] },
+                {"display": "Sociology", "effects": [ { "Insight": 1 } ] },
+                {"display": "Women and Gender", "effects": [ { "Insight": 1 } ] },
+                {"display": "General/undeclared", "effects": [ { "Investigation": 1 } ] }
+            ]
+        },
+        {
+            "id": 22,
+            "title": "Have you ever had/do you have any pets in your house?",
+            "answers": [
+                {"display": "yes", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 23,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a dog?",
+            "answers": [
+                {"display": "yes, and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes, but it felt more like I shared a home with it rather than it being my dog", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 24,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a cat?",
+            "answers": [
+                {"display": "yes, and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes, but it felt more like I shared a home with it rather than it being my cat", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 25,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a bird? (If've you've had a parrot and non-parrot, answer for parrot)",
+            "answers": [
+                {"display": "yes (a parrot), and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes (a parrot), but it felt more like I shared a home with it rather than it being my bird", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "yes (non-parrot), and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 3 } ] },
+                {"display": "yes (non-parrot), but it felt more like I shared a home with it rather than it being my bird", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 26,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a reptile or amphibian?",
+            "answers": [
+                {"display": "yes and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes, but it felt more like I shared a home with it rather than it being my pet", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 25,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a fish/ an aquarium? (If've you've had saltwater and freshwater, answer for saltwater)",
+            "answers": [
+                {"display": "yes (saltwater), and I cared (or helped care) for it", "effects": [ { "Nature": 4 } ] },
+                {"display": "yes (saltwater), but it felt more like I shared a home with it rather than it being my pet", "effects": [ { "nature": 1 } ] },
+                {"display": "yes (freshwater), and I cared (or helped care) for it", "effects": [ { "Nature": 2 } ] },
+                {"display": "yes (freshwater), but it felt more like I shared a home with it rather than it being my pet", "effects": [ { "Nature": 0 } ] },
+                {"display": "no", "effects": [ { "Nature": 0 } ] }
+            ]
+        },
+        {
+            "id": 26,
+            "depends": [
+                {"question": 22, "answers": [ 0 ] }
+            ],
+            "title": "Did you ever have/do you have a small mammal? (hamster, guinea pig, gerbil, mouse, etc.)",
+            "answers": [
+                {"display": "yes, and I interacted with and cared (or helped care) for it", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "yes, but it felt more like I shared a home with it rather than it being my pet", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "no", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 27,
+            "title": "Do you keep your own houseplants or maintain a garden? (You water and care for them yourself and those grown for school don't count)",
+            "answers": [
+                {"display": "yes, and I do a great job/love it. I even have grown some higher maintenance plants", "effects": [ { "Nature": 4 } ] },
+                {"display": "yes and I do a reasonable job/enjoy it. I only keep lower maintenance plants", "effects": [ { "Nature": 3 } ] },
+                {"display": "yes, but they ALWAYS die... I'm not very good at it", "effects": [ { "Nature": -1 } ] },
+                {"display": "I've never grown a plant myself", "effects": [ { "Nature": 0 } ] }
+            ]
+        },
+        {
+            "id": 28,
+            "title": "Have you ever worked a retail job and felt you were good at it? (e.g., working in a clothing store, dealing with customers and selling products)",
+            "answers": [
+                {"display": "yes", "effects": [ { "CHA": 1 } ] },
+                {"display": "no", "effects": [ { "CHA": 0} ] }
+            ]
+        },
+        {
+            "id": 29,
+            "title": "How do you feel about public speaking?",
+            "answers": [
+                {"display": "I enjoy and am great at it. I feel very comfortable adressing even large or important crowds", "effects": [ { "CHA": 4 } ] },
+                {"display": "I am good at it and enjoy it somewhat, but I do it only when needed.", "effects": [ { "CHA": 2 } ] },
+                {"display": "I am average at it and don't enjoy or dislike it", "effects": [ { "CHA": 0 } ] },
+                {"display": "Public speaking makes me nervous and I don't like it", "effects": [ { "CHA": -1 } ] },
+                {"display": "I have terrible stage fright and freeze up when addressing groups", "effects": [ { "CHA": -2 } ] }
+            ]
+        },
+        {
+            "id": 30,
+            "title": "Have you ever ridden a horse?",
+            "answers": [
+                {"display": "I regularly ride and can comfortably ride at a gallop", "effects": [ { "Animal handling": 4 } ] },
+                {"display": "I regularly ride but I'm not comfortable riding at a galloping pace", "effects": [ { "Animal handling": 3 } ] },
+                {"display": "I don't regularly ride but have ridden at faster than a walking pace and I know how to steer and control the horse myself", "effects": [ { "Animal handling": 2 } ] },
+                {"display": "I have ridden before but someone else did most of the work (setting up the tack, directing the horse etc. Think group horseback tours)", "effects": [ { "Animal handling": 1 } ] },
+                {"display": "I have sat on a horse before but pony ride style (someone leading the horse) or have never been on a horse before", "effects": [ { "Animal handling": 0 } ] }
+            ]
+        },
+        {
+            "id": 31,
+            "title": "Have you done archery before?",
+            "answers": [
+                {"display": "Yes and I'm good at it (I do archery regularly, use it to hunt, etc.)", "effects": [ { "DEX": 4 } ] },
+                {"display": "Yes I've done it more than once and I'm ok at it", "effects": [ { "DEX": 3 } ] },
+                {"display": "Yes I've tried it before and I'm about as good as you'd expect a beginner to be", "effects": [ { "DEX": 2 } ] },
+                {"display": "Yes but I've only tried it once (for example, as part of summer camp as a child)", "effects": [ { "DEX": 0 } ] },
+                {"display": "No I have never fired a bow", "effects": [ { "DEX": 0 } ] }
+            ]
+        },
+        {
+            "id": 32,
+            "title": "What is your experience with camping?",
+            "answers": [
+                {"display": "I go quite often, have done a variety of different types (backpacking, winter camping, etc.). I know my way around camping equipment and have camped in places where I had to bring everything I needed (no ammenities at the campsite)", "effects": [ { "Survival": 4 } ] }
             ]
         }
     ]
