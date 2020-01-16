@@ -18,7 +18,7 @@
                 { "display": "8-12 hours", "effects": [ { "STR": 3 }, {"Athletics": 3} ] },
                 { "display": "4-8 hours", "effects": [ { "STR": 2}, {"Athletics": 2} ] },
                 { "display": "2-4 hours", "effects": [ { "STR": 1}, {"Athletics": 1} ] },
-                { "display": "<2 hours", "effects": [ { "STR": 0},  ] }
+                { "display": "<2 hours", "effects": [ { "STR": 0} ] }
             ]
         },
         {
@@ -72,7 +72,7 @@
             "answers": [
                 { "display": "More then 15", "effects": [{"INT": 2}] },
                 { "display": "More then 3", "effects": [{"INT": 1}] },
-                { "display": "3 or less", "effects": [{"INT": 0}] },
+                { "display": "3 or less", "effects": [{"INT": 0}] }
             ]
         }
     ]
